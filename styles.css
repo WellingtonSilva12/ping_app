@@ -1,3 +1,10 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
@@ -21,4 +28,57 @@ body {
   li {
     margin: 5px 0;
   }
+
+  .he-50 {
+    height: 15rem;
+    border-bottom: 12px;
+  }
+
+
+
+  .container-fluid {
+    background-color: #1A203A ;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .container-fluid .row {
+    margin-top: 2.5rem;
+  }
+
+  .container-fluid .box {
+    border-radius: 12px;
+    background-color: #262B49;
+  }
+
+  .container-fluid .card {
+    border: none;
+    border-radius: 18px;
+  }
+
+  .card .card-body {
+    border-radius: 12px;
+  }
+
+  .title {
+    color: #fff;
+  }
+
+  .col-md-3 {
+    border: none;
+  }
+
+  .circle {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-color: #fff;
+  }
+
+  #clock {
+    font-size: 5rem;
+    font-weight: bold;
+    color: #fff;
+  }
   
+
