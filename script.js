@@ -18,8 +18,8 @@ function addHostToList(networkName, host) {
   colDiv.className = "col-lg-2 mb-3"; // Coluna responsiva
   
   colDiv.innerHTML = `
-    <div class="card">
-      <div class="card-body bg-success text-light">
+    <div class="card-host card bg-success">
+      <div class="card-body">
         <h5 class="card-title">${networkName}</h5>
         <h6 class="card-subtitle mb-2 ">${host}</h6>
         <p class="card-text"><span id="status-${host}">Esperando...</span></p>
@@ -144,6 +144,39 @@ function stopPings() {
   }
   document.getElementById('result').innerText = 'Todos os pings parados.';
 }
+
+// Funcao do relogio 
+function updateClock() {
+  const now = new Date();
+  const hours = String(now.getHours()).padStart(2, '0');
+  const minutes = String(now.getMinutes()).padStart(2, '0');
+  const seconds = String(now.getSeconds()).padStart(2, '0');
+
+  document.getElementById('hours').textContent = hours;
+  document.getElementById('minutes').textContent = minutes;
+  document.getElementById('seconds').textContent = seconds;
+}
+
+// Atualiza o relógio imediatamente e depois a cada segundo
+updateClock();
+setInterval(updateClock, 1000);
+
+// Funcao que modifica a data 
+
+function updateDate() {
+  const days = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'];
+  const now = new Date();
+  const dayName = days[now.getDay()]; // Nome do dia da semana
+  const day = String(now.getDate()).padStart(2, '0'); // Dia do mês
+  const month = String(now.getMonth() + 1).padStart(2, '0'); // Mês (os meses começam em 0)
+  const year = now.getFullYear(); // Ano
+
+  const formattedDate = `${dayName} | ${day}-${month}-${year}`;
+  document.getElementById('date').textContent = formattedDate;
+}
+updateDate();
+setInterval(updateDate, 60000); // Atualiza a data a cada minuto
+
 
 // Carrega os hosts quando a página é carregada
 window.onload = loadHosts;

@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Press+Start+2P&family=Rajdhani:wght@300;400;500;600;700&family=Silkscreen:wght@400;700&display=swap');
+
+
+.container-fluid {
+    background-color: #1A203A ;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container-fluid .form-control {
+    outline: none;
+  }
+  
+  .container-fluid .card-host {
+    border: none;
+    outline: none;
+    border-radius: 12px;
+  }
+  
+  .card-host .bg-danger, .card-host .bg-success {
+    border: none;
+    outline: none;
+    border-radius: 12px;
+  }
+.row .box {
+    border-radius: 12px;
+    background-color: #262B49;
+} 
+
+.title {
+    font-family: "Inter", sans-serif;
+
+}
+.clock {
+    font-family: "Rajdhani", sans-serif;
+    font-size: 4rem;
+    font-weight: 400;
+
+}
+
+.date {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #fff;
+    margin-top: 10px; /* Adiciona um espaço entre o relógio e a data */
+}
