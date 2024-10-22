@@ -23,7 +23,7 @@ function addHostToList(networkName, host) {
         <h5 class="card-title">${networkName}</h5>
         <h6 class="card-subtitle mb-2 ">${host}</h6>
         <p class="card-text"><span id="status-${host}">Esperando...</span></p>
-        <button onclick="removeHost('${host}', this)" class="d-none btn btn-danger">Remover</button>
+        <button onclick="removeHost('${host}', this)" class=" d-none btn btn-danger">Remover</button>
       </div>
     </div>
   `;
@@ -68,8 +68,8 @@ function saveHostToLocalStorage(networkName, host) {
 function pingNode(host) {
   const currentTime = Date.now();
 
-  // Verifica se já passaram 60 segundos desde o último ping
-  if (lastPingTimes[host] && currentTime - lastPingTimes[host] < 60000) {
+  // Verifica se já passaram 5 minutos desde o último ping
+  if (lastPingTimes[host] && currentTime - lastPingTimes[host] < 300000) {
     console.log(`Cooldown em vigor para ${host}. Esperando...`);
     return; // Sai da função se estiver dentro do cooldown
   }
