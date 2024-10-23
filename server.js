@@ -37,5 +37,5 @@ app.get('/ping/:host', async (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Servidor rodando em http://localhost:${port}`);
+  console.log(`Server running in http://172.20.8.187:${port}`);
 });

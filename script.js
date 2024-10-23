@@ -69,13 +69,13 @@ function pingNode(host) {
   const currentTime = Date.now();
 
   // Verifica se já passaram 5 minutos desde o último ping
-  if (lastPingTimes[host] && currentTime - lastPingTimes[host] < 300000) {
+  if (lastPingTimes[host] && currentTime - lastPingTimes[host] < 10000) {
     console.log(`Cooldown em vigor para ${host}. Esperando...`);
     return; // Sai da função se estiver dentro do cooldown
   }
 
   // Faz a requisição para o backend para verificar o ping
-  fetch(`http://localhost:3000/ping/${host}`)
+  fetch(`http://172.20.8.187:3000/ping/${host}`)
     .then(response => {
       // Verifica se a resposta é bem-sucedida
       if (!response.ok) {
